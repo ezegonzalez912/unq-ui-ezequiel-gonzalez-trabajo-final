@@ -1,0 +1,20 @@
+{
+  "elements": [
+    { "id": 1, "value": "A", "flipped": false, "matched": false },
+    { "id": 2, "value": "A", "flipped": false, "matched": false },
+    { "id": 3, "value": "B", "flipped": false, "matched": false },
+    { "id": 4, "value": "B", "flipped": false, "matched": false },
+    { "id": 5, "value": "C", "flipped": false, "matched": false },
+    { "id": 6, "value": "C", "flipped": false, "matched": false },
+    { "id": 7, "value": "D", "flipped": false, "matched": false },
+    { "id": 8, "value": "D", "flipped": false, "matched": false },
+    { "id": 9, "value": "E", "flipped": false, "matched": false },
+    { "id": 10, "value": "E", "flipped": false, "matched": false },
+    { "id": 11, "value": "F", "flipped": false, "matched": false },
+    { "id": 12, "value": "F", "flipped": false, "matched": false },
+    { "id": 13, "value": "G", "flipped": false, "matched": false },
+    { "id": 14, "value": "G", "flipped": false, "matched": false },
+    { "id": 15, "value": "H", "flipped": false, "matched": false },
+    { "id": 16, "value": "H", "flipped": false, "matched": false }
+  ]
+}
