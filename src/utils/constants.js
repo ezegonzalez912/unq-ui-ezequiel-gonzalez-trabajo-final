@@ -3,4 +3,8 @@ const modes = {
   MULTIPLAYER: "multiplayer",
 };
 
-export { modes };
+const table = {
+  DEFAULT_SIZE: 2,
+};
+
+export { modes, table };
