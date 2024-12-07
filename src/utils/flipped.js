@@ -17,7 +17,7 @@ const flippedElementAndMatch = (element, elements) => {
 };
 
 const hasFlippedElement = (elements) => {
-  return elements.find((e) => e.flipped);
+  return elements.find((e) => e.flipped && !e.matched);
 };
 
 export {
