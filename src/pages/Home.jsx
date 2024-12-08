@@ -8,7 +8,7 @@ const { SINGLEPLAYER, MULTIPLAYER } = modes;
 export const Home = () => {
   return (
     <div className="memotest__home">
-      <h1 className="memotest__home__title">¡Bienvenido a MemoTech!</h1>
+      <h1 className="memotest__home__title">¡Bienvenido a EmojiTest!</h1>
       <h2 className="memotest__home__subtitle">¿Estás listo para poner a prueba tu memoria?</h2>
       <p className="memotest__home__description">Elige el modo de juego para comenzar:</p>
       <section className="memotest__home__buttons">

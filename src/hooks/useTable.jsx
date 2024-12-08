@@ -14,10 +14,14 @@ export const useTable = () => {
 
   const changeTableSize = (e) => {
     const { value } = e.target;
-    setTableSize(value);
+    setTableSize(parseInt(value));
     const elements = value * value;
     setElements(shuffleElements(data.elements.slice(0, elements)));
   };
 
-  return { tableSize, changeTableSize, elements, setElements };
+  const resetTable = () => {
+    setElements(elementsState(data.elements, tableSize));
+  };
+
+  return { tableSize, changeTableSize, elements, setElements, resetTable };
 };

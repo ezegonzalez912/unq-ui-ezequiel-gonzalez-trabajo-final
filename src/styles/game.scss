@@ -2,6 +2,7 @@
 @use "./table.scss";
 @use "./dashboard.scss";
 @use "./settings.scss";
+@use "./final.scss";
 
 .memotest__game {
   width: 100%;
@@ -11,4 +12,6 @@
   gap: 20px;
   display: flex;
   flex-direction: column;
+  text-align: center;
+  max-width: 600px;
 }

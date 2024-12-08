@@ -18,4 +18,18 @@ const nextTurn = (players) => {
   return players.map((player) => ({ ...player, turn: !player.turn }));
 };
 
-export { addPoint, nextTurn };
+const getWinner = (players) => {
+  if (players.length === 1) return "Has ganado!";
+
+  const [player1, player2] = players;
+
+  if (player1.points === player2.points) {
+    return "El resultado es un empate.";
+  }
+
+  return player1.points > player2.points
+    ? `El ${player1.name} es el ganador!`
+    : `El ${player2.name} es el ganador!`;
+};
+
+export { addPoint, nextTurn, getWinner };

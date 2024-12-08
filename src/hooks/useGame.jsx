@@ -9,12 +9,19 @@ import { playerState } from "../utils/playersState";
 import { addPoint, nextTurn } from "../utils/players";
 import { useSearchParams } from "react-router";
 
-export const useGame = ({ setElements, elements }) => {
+export const useGame = ({ setElements, elements, resetTable }) => {
   const [searchParams] = useSearchParams();
   const mode = searchParams.get("mode");
 
   const [players, setPlayers] = useState(playerState(mode));
   const [load, setLoad] = useState(false);
+  const [foundElements, setFoundElements] = useState(0);
+
+  const resetGame = () => {
+    setPlayers(playerState(mode));
+    setFoundElements(0);
+    resetTable();
+  };
 
   const selectOption = (element) => {
     if (load) return;
@@ -33,7 +40,10 @@ export const useGame = ({ setElements, elements }) => {
     if (foundFlippedElement.value === element.value) {
       setElements((prev) => flippedElementAndMatch(element, prev));
       setPlayers((prev) => addPoint(prev));
-      setLoad(false);
+      setTimeout(() => {
+        setFoundElements((prev) => prev + 1);
+        setLoad(false);
+      }, 1000);
       return;
     }
 
@@ -45,5 +55,5 @@ export const useGame = ({ setElements, elements }) => {
     }, 2000);
   };
 
-  return { selectOption, players };
+  return { foundElements, selectOption, players, resetGame };
 };

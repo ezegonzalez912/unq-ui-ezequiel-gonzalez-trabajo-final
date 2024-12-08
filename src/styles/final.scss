@@ -1,0 +1,40 @@
+@use "./variables.scss" as *;
+
+.final-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.final {
+  background-color: $color-white;
+  border-radius: 15px;
+  padding: 30px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+
+  &__button {
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: $color-violet;
+    color: $color-white;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}
