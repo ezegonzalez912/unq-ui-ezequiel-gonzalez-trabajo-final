@@ -29,7 +29,10 @@ export const useGame = ({ setElements, elements, resetTable }) => {
 
     const foundFlippedElement = hasFlippedElement(elements);
 
-    if (foundFlippedElement?.id === element.id) return;
+    if (foundFlippedElement?.id === element.id) {
+      setLoad(false);
+      return;
+    }
 
     if (!foundFlippedElement) {
       setElements((prev) => flippedElement(element, prev));
