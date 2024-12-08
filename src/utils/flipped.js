@@ -6,7 +6,7 @@ const unFlippedElements = (elements) => {
 
 const flippedElement = (element, elements) => {
   return elements.map((e) =>
-    e.id === element.id ? { ...e, flipped: !e.flipped } : e
+    e.id === element.id && !element.matched ? { ...e, flipped: !e.flipped } : e
   );
 };
 

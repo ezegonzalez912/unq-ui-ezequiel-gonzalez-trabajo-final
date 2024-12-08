@@ -14,18 +14,26 @@ export const useGame = ({ setElements, elements }) => {
   const mode = searchParams.get("mode");
 
   const [players, setPlayers] = useState(playerState(mode));
+  const [load, setLoad] = useState(false);
 
   const selectOption = (element) => {
+    if (load) return;
+    setLoad(true);
+
     const foundFlippedElement = hasFlippedElement(elements);
+
+    if (foundFlippedElement?.id === element.id) return;
 
     if (!foundFlippedElement) {
       setElements((prev) => flippedElement(element, prev));
+      setLoad(false);
       return;
     }
 
     if (foundFlippedElement.value === element.value) {
       setElements((prev) => flippedElementAndMatch(element, prev));
       setPlayers((prev) => addPoint(prev));
+      setLoad(false);
       return;
     }
 
@@ -33,6 +41,7 @@ export const useGame = ({ setElements, elements }) => {
     setTimeout(() => {
       setElements((prev) => unFlippedElements(prev));
       setPlayers((prev) => nextTurn(prev));
+      setLoad(false);
     }, 2000);
   };
 

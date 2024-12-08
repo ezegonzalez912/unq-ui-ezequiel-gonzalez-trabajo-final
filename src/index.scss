@@ -1,11 +1,11 @@
-@use './styles/app.scss';
+@use "./styles/app.scss";
 @use "./styles/variables" as *;
 
 :root {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 
   color: $color-black;
-  background-color: $color-bg;;
+  background-color: $color-bg;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;

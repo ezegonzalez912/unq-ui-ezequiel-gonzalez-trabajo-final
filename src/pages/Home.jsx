@@ -1,6 +1,9 @@
 import GroupIcon from "@mui/icons-material/Group";
 import PersonIcon from "@mui/icons-material/Person";
 import { Link } from "react-router";
+import { modes } from "../utils/constants";
+
+const { SINGLEPLAYER, MULTIPLAYER } = modes;
 
 export const Home = () => {
   return (
@@ -9,11 +12,11 @@ export const Home = () => {
       <h2 className="memotest__home__subtitle">¿Estás listo para poner a prueba tu memoria?</h2>
       <p className="memotest__home__description">Elige el modo de juego para comenzar:</p>
       <section className="memotest__home__buttons">
-        <Link to="/play?mode=singleplayer" className="memotest__home__buttons__btn">
+        <Link to={`/play?mode=${SINGLEPLAYER}`} className="memotest__home__buttons__btn">
           <PersonIcon className="memotest__home__buttons__btn__icon" />
           <p>Individual</p>
         </Link>
-        <Link to="/play?mode=multiplayer" className="memotest__home__buttons__btn">
+        <Link to={`/play?mode=${MULTIPLAYER}`} className="memotest__home__buttons__btn">
           <GroupIcon className="memotest__home__buttons__btn__icon" />
           <p>Multijugador</p>
         </Link>

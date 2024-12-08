@@ -1,6 +1,8 @@
+import PropTypes from "prop-types";
+
 export const Dashboard = ({ players }) => {
   return (
-    <div>
+    <div className="dashboard">
       {players.map((player) => (
         <div key={player.name}>
             <p>{player.name}</p>
@@ -10,4 +12,8 @@ export const Dashboard = ({ players }) => {
       ))}
     </div>
   );
+};
+
+Dashboard.propTypes = {
+  players: PropTypes.arrayOf(PropTypes.shape({})).isRequired,
 };

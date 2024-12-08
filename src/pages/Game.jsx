@@ -9,7 +9,7 @@ export const Game = () => {
   const { players, selectOption } = useGame({ setElements, elements });
 
   return (
-    <div>
+    <div className="memotest__game">
       <Dashboard players={players} />
       <Table
         elements={elements}
