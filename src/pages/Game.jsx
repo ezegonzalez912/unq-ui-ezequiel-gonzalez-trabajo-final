@@ -6,13 +6,8 @@ import { useGame } from "../hooks/useGame";
 import { Final } from "../components/Final";
 
 export const Game = () => {
-  const { tableSize, changeTableSize, elements, setElements, resetTable } =
-    useTable();
-  const { foundElements, players, selectOption, resetGame } = useGame({
-    setElements,
-    elements,
-    resetTable,
-  });
+  const { tableSize, changeTableSize, elements, setElements, resetTable } = useTable();
+  const { foundElements, players, selectOption, resetGame } = useGame({ setElements, elements, resetTable });
 
   const finalized = foundElements === (tableSize * tableSize) / 2;
 
@@ -21,11 +16,7 @@ export const Game = () => {
       {finalized && <Final players={players} resetGame={resetGame} />}
       <h1>EmojiTest</h1>
       <Dashboard players={players} />
-      <Table
-        elements={elements}
-        tableSize={tableSize}
-        selectOption={selectOption}
-      />
+      <Table elements={elements} tableSize={tableSize} selectOption={selectOption} />
       <Settings tableSize={tableSize} changeTableSize={changeTableSize} resetGame={resetGame} />
     </div>
   );

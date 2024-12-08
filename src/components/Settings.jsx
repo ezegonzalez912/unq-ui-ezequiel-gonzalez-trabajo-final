@@ -1,6 +1,12 @@
 import PropTypes from "prop-types";
 
 export const Settings = ({ tableSize, changeTableSize, resetGame }) => {
+
+  const handleChangeSize = (e) => {
+    resetGame();
+    changeTableSize(e);
+  };
+
   return (
     <section className="settings">
       <div className="settings__content">
@@ -12,10 +18,7 @@ export const Settings = ({ tableSize, changeTableSize, resetGame }) => {
           min="2"
           max="8"
           value={tableSize}
-          onChange={(e) => {
-            resetGame();
-            changeTableSize(e);
-          }}
+          onChange={handleChangeSize}
         />
       </div>
       <button className="settings__btn" onClick={resetGame}>
