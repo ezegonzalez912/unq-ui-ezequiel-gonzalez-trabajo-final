@@ -4,7 +4,7 @@ const modes = {
 };
 
 const table = {
-  DEFAULT_SIZE: 2,
+  DEFAULT_SIZE: 4,
 };
 
 export { modes, table };
