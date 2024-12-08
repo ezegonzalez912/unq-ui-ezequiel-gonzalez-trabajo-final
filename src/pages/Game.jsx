@@ -26,7 +26,7 @@ export const Game = () => {
         tableSize={tableSize}
         selectOption={selectOption}
       />
-      <Settings tableSize={tableSize} changeTableSize={changeTableSize} />
+      <Settings tableSize={tableSize} changeTableSize={changeTableSize} resetGame={resetGame} />
     </div>
   );
 };

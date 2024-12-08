@@ -9,7 +9,7 @@ export const Card = ({ element, selectOption, tableSize }) => {
         className={`card-container__content ${
           !flipped ? "card-container__content--flipped" : ""
         }`}
-        style={{ fontSize: tableSize > 5 ? "2rem" : "5rem" }}
+        style={{ fontSize: tableSize > 5 ? "1.5rem" : "3rem" }}
       >
         <div className="card-container__content__front">
           <p>{value}</p>

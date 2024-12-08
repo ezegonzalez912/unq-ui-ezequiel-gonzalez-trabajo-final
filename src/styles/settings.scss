@@ -6,12 +6,30 @@
   border-radius: 20px;
   padding: 15px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
   gap: 20px;
+  flex-direction: column;
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
 
   &__title {
     width: 100%;
+    text-align: left;
+  }
+
+  &__btn {
+    border: none;
+    padding: 10px 30px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: $color-violet;
+    color: $color-white;
+    transition: 0.2s;
   }
 
   &__input {
