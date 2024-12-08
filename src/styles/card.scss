@@ -34,12 +34,11 @@
 
   &__front {
     background-color: $color-secondary;
-    color: white;
   }
 
   &__back {
     background-color: $color-primary;
-    color: white;
+    color: $color-white;
     transform: rotateY(180deg);
   }
 }

@@ -39,8 +39,8 @@ export const useGame = ({ setElements, elements, resetTable }) => {
 
     if (foundFlippedElement.value === element.value) {
       setElements((prev) => flippedElementAndMatch(element, prev));
-      setPlayers((prev) => addPoint(prev));
       setTimeout(() => {
+        setPlayers((prev) => addPoint(prev));
         setFoundElements((prev) => prev + 1);
         setLoad(false);
       }, 1000);

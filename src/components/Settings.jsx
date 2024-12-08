@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 export const Settings = ({ tableSize, changeTableSize, resetGame }) => {
   return (
     <section className="settings">
@@ -21,4 +23,10 @@ export const Settings = ({ tableSize, changeTableSize, resetGame }) => {
       </button>
     </section>
   );
+};
+
+Settings.propTypes = {
+  resetGame: PropTypes.func.isRequired,
+  changeTableSize: PropTypes.func.isRequired,
+  tableSize: PropTypes.number.isRequired,
 };
