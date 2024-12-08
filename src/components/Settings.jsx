@@ -1,8 +1,9 @@
 export const Settings = ({ tableSize, changeTableSize }) => {
   return (
-    <section>
-      <p>Tamaño de tablero</p>
+    <section className="settings">
+      <p className="settings__title">Tamaño de tablero</p>
       <input
+        className="settings__input"
         type="range"
         step="2"
         min="2"

@@ -4,10 +4,15 @@ export const Dashboard = ({ players }) => {
   return (
     <div className="dashboard">
       {players.map((player) => (
-        <div key={player.name}>
-            <p>{player.name}</p>
-            <p>{player.points}</p>
-            <p>{JSON.stringify(player.turn)}</p>
+        <div key={player.name} className={"dashboard__player"}>
+          <p
+            className={`dashboard__player__name ${
+              player.turn ? "dashboard__player__name--active" : ""
+            }`}
+          >
+            {player.turn && "➤"} {player.name}
+          </p>
+          <p>Puntos: {player.points}</p>
         </div>
       ))}
     </div>

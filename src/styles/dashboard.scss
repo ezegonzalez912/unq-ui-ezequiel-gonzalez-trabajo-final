@@ -1,3 +1,29 @@
+@use "./variables.scss" as *;
+
 .dashboard {
-    
+  background-color: $color-white;
+  border-radius: 20px;
+  padding: 15px;
+  box-shadow: $shadow-component;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  &__player {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+
+    &__name {
+      border-radius: 20px;
+      padding: 5px 10px;
+      background-color: $color-blue;
+
+      &--active {
+        background-color: $color-brown;
+      }
+    }
+  }
 }

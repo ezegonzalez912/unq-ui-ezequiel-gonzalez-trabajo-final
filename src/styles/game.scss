@@ -1,9 +1,14 @@
 @use "./card.scss";
 @use "./table.scss";
+@use "./dashboard.scss";
+@use "./settings.scss";
 
 .memotest__game {
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
   padding: 20px;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
 }
