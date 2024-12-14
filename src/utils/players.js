@@ -5,8 +5,8 @@ const addPoint = (players) => {
 
   return players.map((player) =>
     player.turn
-      ? { ...player, points: player.points + 1, turn: false }
-      : { ...player, turn: true }
+      ? { ...player, points: player.points + 1 }
+      : { ...player }
   );
 };
 

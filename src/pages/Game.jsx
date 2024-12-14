@@ -5,9 +5,9 @@ import { useTable } from "../hooks/useTable";
 import { useGame } from "../hooks/useGame";
 import { Final } from "../components/Final";
 
-export const Game = () => {
+export const Game = ({ mode }) => {
   const { tableSize, changeTableSize, elements, setElements, resetTable } = useTable();
-  const { foundElements, players, selectOption, resetGame } = useGame({ setElements, elements, resetTable });
+  const { foundElements, players, selectOption, resetGame } = useGame({ mode, setElements, elements, resetTable });
 
   const finalized = foundElements === (tableSize * tableSize) / 2;
 

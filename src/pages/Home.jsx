@@ -12,11 +12,11 @@ export const Home = () => {
       <h2 className="memotest__home__subtitle">¿Estás listo para poner a prueba tu memoria?</h2>
       <p className="memotest__home__description">Elige el modo de juego para comenzar:</p>
       <section className="memotest__home__buttons">
-        <Link to={`/play?mode=${SINGLEPLAYER}`} className="memotest__home__buttons__btn">
+        <Link to={`/play/${SINGLEPLAYER}`} className="memotest__home__buttons__btn">
           <PersonIcon className="memotest__home__buttons__btn__icon" />
           <p>Individual</p>
         </Link>
-        <Link to={`/play?mode=${MULTIPLAYER}`} className="memotest__home__buttons__btn">
+        <Link to={`/play/${MULTIPLAYER}`} className="memotest__home__buttons__btn">
           <GroupIcon className="memotest__home__buttons__btn__icon" />
           <p>Multijugador</p>
         </Link>
